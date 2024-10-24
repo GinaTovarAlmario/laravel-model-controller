@@ -3,6 +3,6 @@
 @section("page-title", "Homepage")
 @section("main-content")
     <h1>
-        Homepage
+        Homepage Movies
     </h1>
 @endsection
