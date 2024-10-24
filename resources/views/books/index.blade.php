@@ -6,8 +6,8 @@
     <section class="container" id="movies-list">
         <div class="row">
             @forelse ($movies as $movie)
-            <div class="col-4">
-                <div class="card">
+            <div class="col-3">
+                <div class="card box-movies mb-4">
                     <div class="card-body">
                         <h5 class="card-title">
                             Title: {{$movie->title}}
