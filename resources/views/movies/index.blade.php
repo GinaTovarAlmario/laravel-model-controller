@@ -3,36 +3,41 @@
 @section('page-title', 'Movies Index')
 
 @section('main-content')
-    <section class="container" id="movies-list">
-        <div class="row">
-            @forelse ($movies as $movie)
-            <div class="col-3">
-                <div class="card box-movies mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Title: {{$movie->title}}
-                        </h5>
-                        <h5 class="card-title">
-                            Orginal Title: {{$movie->original_title}}
-                        </h5>
-                        <p class="card-text">
-                            Nationality: {{$movie->nationality}}
-                        </p>
-                        <p class="card-text">
-                            Date: {{$movie->date}}
-                        </p><p class="card-text">
-                            Vote: {{$movie->vote}}
-                        </p>
+    <section class=" bg-secondary" id="movies-list">
+        <div class="container ">
+            <div class="row ">
+                @forelse ($movies as $movie)
+                    <div class="col-3 mt-3 mb-3">
+                        <div class="card box-movies mb-4 bg-dark-subtle">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <span class="fw-bold fs-4 text-danger">Title: </span>
+                                    <h4> {{ $movie->title }}</h4>
+                                </div>
+                                <div class="card-text fs-5 ">
+                                    <span class="fw-bold text-danger">Original Title: </span>
+                                    <h5>{{ $movie->original_title }}</h5>
+                                </div>
+                                <p class="card-text fs-5 fw-semi-bold ">
+                                   <span class="fw-bold text-danger">Nationality: </span>{{ $movie->nationality }}
+                                </p>
+                                <p class="card-text fs-5 fw-semi-bold  ">
+                                    <span class="fw-bold text-danger"> Date: </span>{{ $movie->date }}
+                                </p>
+                                <p class="card-text fs-5 fw-semi-bold">
+                                    <span class="fw-bold text-danger">Vote: </span>{{ $movie->vote }}
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                @empty
+                    <div class="col-12">
+                        <h2>
+                            No movies available..
+                        </h2>
+                    </div>
+                @endforelse
             </div>
-            @empty
-            <div class="col-12">
-                <h2>
-                    No movies available..
-                </h2>
-            </div>
-            @endforelse
         </div>
     </section>
 @endsection
