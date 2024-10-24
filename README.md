@@ -55,6 +55,7 @@ Prima di tutto eseguiamo il primo comando di installazione di npm
  - Le diamo un nome come richiesto
  - La cloniamo direttamente dalla nostra IDE (vscode)
  - Apriamo la repository
+ - Copio e incollo il mio file `.env.example` e lo rinomino come `.env`
  - Eseguiamo `npm install`
  - Eseguiamo `composer install`
  - Eseguiamo il comando di generazione della chiave univoca del nostro
